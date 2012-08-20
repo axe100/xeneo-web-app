@@ -41,14 +41,14 @@ header{
 
 #main{
     width:650px;
-    min-height:600px;
+    min-height: 600px;
     background-color: whitesmoke;
     float:left;
 }
 
 aside{
     width:300px;
-    height:600px;
+    height:auto;
     margin-bottom: 10px;
     margin-left:10px;
     background-color: whitesmoke;
@@ -123,18 +123,6 @@ footer{
     font-family:Arial;
     font-size: 10px;
     color: red; 
-}
-
-.buttons1{
-    margin-left:27px;
-    margin-top: 24px;
-    margin-bottom: 20px;
-}
-
-.buttons{
-    margin-left:16px;
-    margin-top: 24px;
-    margin-bottom: 20px;
 }
 
 #Userform{
@@ -218,6 +206,15 @@ ctDropdown{
     height: auto;
 }
 
+.button1{
+    margin-left:3px;
+    margin-top: 15px;
+}
+
+.button2{
+    margin-left:18px;
+}
+
 
 /*Case management*/
 
@@ -230,6 +227,11 @@ ctDropdown{
 
     border:0 !important;
     vertical-align: top;
+    padding: 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    
+    
 }
 
 .fieldset{
@@ -248,11 +250,12 @@ ctDropdown{
 
 }
 
-.editors{
-
-    height:100px;
-    width:200px;
+.ui.editor{
+    height:250px;
+    width:498px;
+    margin-top: 15px;
 }
+
 .description{
     float:top;
 }
@@ -261,10 +264,34 @@ ctDropdown{
 /*Customization Primefaces Elements*/
 
 .ui-panel .ui-panel-titlebar {
-  padding:4px;
+padding-left: 15px;
+padding-top: 5px;
+padding-bottom: 5px;
 }
 
 .ui-button {
   margin-right:0;
 }
 
+/*Button PF*/
+
+.ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.ui-panel-content ui-widget-content{
+    padding:7px;
+}
+
+.ui.button{
+    margin-left:7px;
+}
+
+.ui-panel .ui-panel-content {
+border: 0;
+background: none;
+padding: 14px;
+padding-top: 15px;
+padding-bottom: 15px;
+}
