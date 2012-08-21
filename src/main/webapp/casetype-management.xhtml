@@ -23,18 +23,17 @@
 
                         <h:panelGrid columns="2" styleClass="panelclass">
 
-                            <h:outputLabel class="labels" value="Case type name: " for="CaseTypeName"/>
-                            <p:inputText id="CaseTypeName" value="#{casetype.caseTypeName}"/>
+                            <h:outputLabel value="Case type name: " for="CaseTypeName"/>
+                            <p:inputText style="margin-left: 15px;"  value="#{casetype.caseTypeName}"/>
 
-                            <h:outputLabel class="description" value="Case type description: " for="CaseTypeDescription"/>
-                            <p:editor value="#{casetype.caseTypeDescription}" controls="bold italic underline strikethrough"/>
+                            <h:outputLabel  value="Case type description: " for="CaseTypeDescription"/>
+                            <p:editor value="#{casetype.caseTypeDescription}" width="456" height="250" style="margin-left:15px;"  controls="bold italic underline strikethrough"/>
 
-
+                            <p:commandButton type="submit" action="#{casetype.savecasetype()}" value="Save case type" />
+                            
+                            <p:commandButton type="reset" value="Reset" styleClass="rightButton"/>
+                            
                         </h:panelGrid>
-
-                        <p:commandButton type="submit" action="#{casetype.savecasetype()}" value="Save case type" styleClass="button1"/>
-                        <p:commandButton type="reset" value="Reset" styleClass="button2"/>
-
                     </p:panel>              
                 </h:form>
 

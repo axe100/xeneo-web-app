@@ -106,8 +106,8 @@ footer{
 /* Content */
 
 
-#labels{
-    width: 450px;
+.labels{
+   margin-top:15px;
 }
 #inputs{
     width:450px;
@@ -206,32 +206,25 @@ ctDropdown{
     height: auto;
 }
 
-.button1{
-    margin-left:3px;
-    margin-top: 15px;
-}
-
-.button2{
-    margin-left:18px;
-}
-
-
 /*Case management*/
 
-#inputtext{
-    size: 100px;
 
+.outputtext{
+    margin-top:15px; 
 }
 
 .panelclass td, .panelclass tr{
 
     border:0 !important;
     vertical-align: top;
-    padding: 0px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    
-    
+    padding-top: 15px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+
+}
+
+.rightButton{
+    margin-left:13px;
 }
 
 .fieldset{
@@ -248,50 +241,4 @@ ctDropdown{
     margin-left:20px;
     margin-right:20px;
 
-}
-
-.ui.editor{
-    height:250px;
-    width:498px;
-    margin-top: 15px;
-}
-
-.description{
-    float:top;
-}
-
-
-/*Customization Primefaces Elements*/
-
-.ui-panel .ui-panel-titlebar {
-padding-left: 15px;
-padding-top: 5px;
-padding-bottom: 5px;
-}
-
-.ui-button {
-  margin-right:0;
-}
-
-/*Button PF*/
-
-.ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only {
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.ui-panel-content ui-widget-content{
-    padding:7px;
-}
-
-.ui.button{
-    margin-left:7px;
-}
-
-.ui-panel .ui-panel-content {
-border: 0;
-background: none;
-padding: 14px;
-padding-top: 15px;
-padding-bottom: 15px;
 }
