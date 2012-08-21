@@ -10,39 +10,41 @@
         <title>XENEO - Profile Management</title>
     </h:head>
     <h:body>
-        
+
         <ui:composition template="templates/masterLayout.xhtml">
-            
+
             <ui:define name="message.insert"></ui:define>  
             <ui:define name="header.insert"><ui:include src="includes/header.xhtml"/></ui:define>
             <ui:define name="nav.insert"><ui:include src="includes/menuebar.xhtml"/></ui:define>
             <ui:define name="main.insert">
-                
+
                 <h:form>
                     <p:panel header="Add Task">
 
                         <h:panelGrid columns="2" styleClass="panelclass" cellpadding="5">
 
                             <h:outputLabel class="labels" value="Task name: " />
-                            <p:inputText value="#{task.name}"/>
+                            <p:inputText value="#{task.name}" style="margin-left: 15px;"/>
 
-                            <h:outputLabel class="description" value="Task description: "/>
-                            <p:editor value="#{task.description}" controls="bold italic underline strikethrough"/>
-
+                            <h:outputLabel class="labels" value="Task description: "/>
+                            <p:editor value="#{task.description}" width="466" height="250" style="margin-left:15px;" controls="bold italic underline strikethrough"/>
 
                         </h:panelGrid>
 
-                        <p:commandButton type="submit" action="#{task.saveTask()}" value="Save Task" styleClass="buttons1"/>
+
+                        <p:commandButton type="submit" action="#{task.saveTask()}" styleClass="buttons1" value="Save Task" />
                         <p:commandButton type="reset" value="Reset All" styleClass="buttons"/>
+
+
 
                     </p:panel>              
                 </h:form>
-                
+
             </ui:define>
             <ui:define name="aside.insert"></ui:define>
             <ui:define name="footer.insert"></ui:define>
-            
+
         </ui:composition>
-        
+
     </h:body>
 </html>

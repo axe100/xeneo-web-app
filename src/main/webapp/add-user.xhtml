@@ -25,14 +25,14 @@
                         <p:fieldset legend="Accountdata" styleClass="fieldset1">
                             <h:panelGrid columns="2" styleClass="panelclass" cellpadding="5">
 
-                                <h:outputText class="labels" value="Vorname: "/>
-                                <p:inputText styleClass="FN" value="#{adduser.firstName}" required="true"/>
+                                <h:outputText class="labels1" value="Vorname: "/>
+                                <p:inputText styleClass="FN" value="#{adduser.firstName}" required="true" style="margin-left:15px;"/>
 
-                                <h:outputLabel class="labels" value="Nachname: " for="LN"/>
-                                <p:inputText styleClass="LN" value="#{adduser.lastName}" required="true"/>
+                                <h:outputLabel class="labels1" value="Nachname: " for="LN"/>
+                                <p:inputText styleClass="LN" value="#{adduser.lastName}" required="true" style="margin-left:15px;"/>
 
-                                <h:outputLabel class="labels" value="E-Mail Adresse: " for="EA"/>
-                                <p:inputText styleClass="EA" value="#{adduser.email}" required="true"/>
+                                <h:outputLabel class="labels1" value="E-Mail Adresse: " for="EA"/>
+                                <p:inputText styleClass="EA" value="#{adduser.email}" required="true" style="margin-left:15px;"/>
 
                             </h:panelGrid>
                         </p:fieldset>
@@ -41,12 +41,12 @@
                         <p:fieldset legend="Password" styleClass="fieldset">
                             <h:panelGrid columns="2" styleClass="panelclass" cellpadding="5">
 
-                                <h:outputLabel class="labels" value="Neues Passwort: " for="NewPW"/> 
-                                <p:password styleClass="NewPW"  value="#{adduser.newpw}" />
+                                <h:outputLabel class="labels1" value="Neues Passwort: " for="NewPW"/> 
+                                <p:password styleClass="NewPW"  value="#{adduser.newpw}" style="margin-left:15px;"/>
 
 
-                                <h:outputLabel class="labels" value="Bestätigung Neues Passwort: " for="NewPW2"/>
-                                <p:password styleClass="NewPW2" value="#{adduser.newpw2}" />
+                                <h:outputLabel class="labels1" value="Bestätigung Neues Passwort: " for="NewPW2"/>
+                                <p:password styleClass="NewPW2" value="#{adduser.newpw2}" style="margin-left:15px;"/>
 
                             </h:panelGrid>
                         </p:fieldset>

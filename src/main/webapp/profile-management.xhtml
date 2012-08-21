@@ -25,14 +25,14 @@
                         <p:fieldset legend="User Data" styleClass="fieldset1">
                             <h:panelGrid columns="2" styleClass="panelclass" cellpadding="5">
 
-                                <h:outputText class="labels" value="Firstname"/>
-                                <p:inputText styleClass="FN" value="#{user.firstName}" required="true"/>
+                                <h:outputText class="labels1" value="Firstname"/>
+                                <p:inputText styleClass="FN" value="#{user.firstName}" required="true" style="margin-left:15px;"/>
 
-                                <h:outputLabel class="labels" value="Lastname: " for="LN"/>
-                                <p:inputText styleClass="LN" value="#{user.lastName}" required="true"/>
+                                <h:outputLabel class="labels1" value="Lastname: " for="LN"/>
+                                <p:inputText styleClass="LN" value="#{user.lastName}" required="true" style="margin-left:15px;"/>
 
-                                <h:outputLabel class="labels" value="E-Mail Adress: " for="EA"/>
-                                <p:inputText styleClass="EA" value="#{user.email}" required="true"/>
+                                <h:outputLabel class="labels1" value="E-Mail Adress: " for="EA"/>
+                                <p:inputText styleClass="EA" value="#{user.email}" required="true" style="margin-left:15px;"/>
 
                             </h:panelGrid>
                         </p:fieldset>
@@ -41,16 +41,16 @@
                         <p:fieldset legend="Change Password" styleClass="fieldset">
                             <h:panelGrid columns="2" styleClass="panelclass" cellpadding="5">
 
-                                <h:outputLabel class="labels" value="Old Password: " for="OldPW"/>
-                                <p:password styleClass="OldPW" value="#{user.password}" />
+                                <h:outputLabel class="labels1" value="Old Password: " for="OldPW"/>
+                                <p:password styleClass="OldPW" value="#{user.password}" style="margin-left:15px;"/>
 
 
-                                <h:outputLabel class="labels" value="New Password 1: " for="NewPW"/> 
-                                <p:password styleClass="NewPW"  value="#{user.newpw}" />
+                                <h:outputLabel class="labels1" value="New Password 1: " for="NewPW"/> 
+                                <p:password styleClass="NewPW"  value="#{user.newpw}" style="margin-left:15px;"/>
 
 
-                                <h:outputLabel class="labels" value="Confirmation New Password: " for="NewPW2"/>
-                                <p:password styleClass="NewPW2" value="#{user.newpw2}" />
+                                <h:outputLabel class="labels1" value="Confirmation New Password: " for="NewPW2"/>
+                                <p:password styleClass="NewPW2" value="#{user.newpw2}" style="margin-left:15px;"/>
 
                             </h:panelGrid>
                         </p:fieldset>

@@ -49,6 +49,7 @@ header{
 aside{
     width:300px;
     height:auto;
+    min-height: 600px;
     margin-bottom: 10px;
     margin-left:10px;
     background-color: whitesmoke;
@@ -70,6 +71,7 @@ footer{
 .panelgrid td, .panelgrid tr{
     border:0 !important;
     background-color: whitesmoke;
+    padding: 0px !important;
 }
 
 .log_button{
@@ -103,11 +105,26 @@ footer{
     word-spacing: 10px;
 }
 
+/*Profilemgmt AddUser Labels*/
+
+.FN .LN .EA .OldPW .NewPW {
+    margin-left: 15px;
+}
+.NewPW2{
+    margin-left: 15px;
+}
+
+
 /* Content */
 
 
 .labels{
-   margin-top:15px;
+    margin-top:15px;
+    margin-left:11px;
+}
+
+.labels1{
+    margin-top:15px;
 }
 #inputs{
     width:450px;
@@ -218,27 +235,53 @@ ctDropdown{
     border:0 !important;
     vertical-align: top;
     padding-top: 15px;
-    margin-top: 0px;
-    margin-bottom: 5px;
-
-}
-
-.rightButton{
-    margin-left:13px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
 }
 
 .fieldset{
-
-    margin-top:17px;
-    margin-left:20px;
-    margin-right:20px;
-
+    margin-top:15px;
+    margin-bottom:0px;
+    margin-left:17px;
+    margin-right:15px;
 }
 
 .fieldset1{
 
-    margin-top:11px;
-    margin-left:20px;
-    margin-right:20px;
-
+    margin-top:15px;
+    margin-left:17px;
+    margin-right:15px;
 }
+
+.ui-fieldset.fieldset{
+    padding-bottom: 15px !important;
+    padding-left: 15px!important;
+    padding-top: 0px!important;
+}
+
+.ui-fieldset.fieldset1{
+    padding-bottom: 15px!important;
+    padding-left: 15px!important;
+    padding-top: 0px!important;
+}
+
+/*Primefaces Customization*/
+
+
+.ui-button.buttons{
+    margin-bottom: 15px !important;
+    margin-left: 17px!important;
+    margin-top:15px!important;
+}
+
+.ui-button.buttons1{
+    margin-bottom: 15px !important;
+    margin-left: 15px!important;
+    margin-top:15px!important;
+}
+
+.ui-panel .ui-panel-content {
+    padding:0 !important;
+}
+
