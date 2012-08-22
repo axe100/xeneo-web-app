@@ -20,19 +20,19 @@
 
                     <p:panel header="Change Account Data" styleClass="panel">
 
-                        <p:messages showDetail="true" autoUpdate="true"/>
+                        <p:messages showDetail="true" autoUpdate="true" id="messages"/>
 
                         <p:fieldset legend="User Data" styleClass="fieldset1">
                             <h:panelGrid columns="2" styleClass="panelclass" cellpadding="5">
 
                                 <h:outputText class="labels1" value="Firstname"/>
-                                <p:inputText styleClass="FN" value="#{user.firstName}" required="true" style="margin-left:15px;"/>
+                                <p:inputText styleClass="FN" value="#{user.firstName}" style="margin-left:15px;"/>
 
                                 <h:outputLabel class="labels1" value="Lastname: " for="LN"/>
-                                <p:inputText styleClass="LN" value="#{user.lastName}" required="true" style="margin-left:15px;"/>
+                                <p:inputText styleClass="LN" value="#{user.lastName}" style="margin-left:15px;"/>
 
                                 <h:outputLabel class="labels1" value="E-Mail Adress: " for="EA"/>
-                                <p:inputText styleClass="EA" value="#{user.email}" required="true" style="margin-left:15px;"/>
+                                <p:inputText styleClass="EA" value="#{user.email}" style="margin-left:15px;"/>
 
                             </h:panelGrid>
                         </p:fieldset>
@@ -42,7 +42,7 @@
                             <h:panelGrid columns="2" styleClass="panelclass" cellpadding="5">
 
                                 <h:outputLabel class="labels1" value="Old Password: " for="OldPW"/>
-                                <p:password styleClass="OldPW" value="#{user.password}" style="margin-left:15px;"/>
+                                <p:password styleClass="OldPW"  value="#{user.password}" style="margin-left:15px;"/>
 
 
                                 <h:outputLabel class="labels1" value="New Password 1: " for="NewPW"/> 
@@ -57,7 +57,7 @@
 
 
 
-                        <p:commandButton type="submit" action="#{user.savepassword}" value="Save all" styleClass="buttons1"/>
+                        <p:commandButton type="submit" action="#{user.savedata}" value="Save all" styleClass="buttons1"/>
                         <p:commandButton type="reset" value="Reset" styleClass="buttons"/>
 
 

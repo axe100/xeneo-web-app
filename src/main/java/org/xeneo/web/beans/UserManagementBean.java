@@ -28,7 +28,7 @@ import org.springframework.stereotype.Component;
 @Scope("request")
 public class UserManagementBean {
 
-    private String firstname ;
+    private String firstname;
     private String lastname;
     private String email;
     private String password;
@@ -45,8 +45,6 @@ public class UserManagementBean {
     public UserManagementBean() {
     }
 
-    
-    
     public void setFirstName(String firstname) {
         this.firstname = firstname;
     }
@@ -99,41 +97,34 @@ public class UserManagementBean {
         return fncolor;
     }
 
-    public String saveuserdata() {
+    
 
-        if (lastname.equals("") && firstname.equals("") && email.equals("")) {
-
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "All fields are required!", ""));
-
-        }
-
-        return null;
-
-    }
-
-    public String savepassword() {
+    public String savedata() {
 
         TestPasswort = "JSF";
 
         FacesContext context = FacesContext.getCurrentInstance();
+        
+        if (lastname.equals("") || firstname.equals("") || email.equals("") || password.equals("") || newpw.equals("") || newpw2.equals("")) {
 
-
-        if (!(newpw.equals(newpw2)) && !(newpw2.equals("")) && !(newpw.equals(""))) {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "No password match!", ""));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "All Fields are required!", ""));
         }
 
-        if (newpw.length() < 7 && !(newpw.equals(""))) {
-
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Your password should be a minimum of 6 characters!", ""));
+        if (!(newpw.equals(newpw2)) || !(newpw2.equals("")) || !(newpw.equals(""))) {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "The new password needs to be confirmed!", ""));
         }
 
-        if (!(password.equals(TestPasswort)) && !(password.equals(""))) {
+        if (newpw.length() < 7 || !(newpw.equals(""))) {
 
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Wrong password!", ""));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Your new password should be a minimum of 6 characters!", ""));
+        }
+
+        if (!(password.equals(TestPasswort)) || !(password.equals(""))) {
+
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Wrong old password!", ""));
 
         }
 
         return null;
     }
-
 }

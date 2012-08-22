@@ -15,6 +15,8 @@
  */
 package org.xeneo.web.beans;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -47,7 +49,14 @@ public class TaskCreateBean {
 
     public String createTask() {
 
+        FacesContext context = FacesContext.getCurrentInstance();
 
-        return "/";
+        if (titel.equals("") || description.equals("")) {
+
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "All Fields are required!", ""));
+
+        }
+
+        return null;
     }
 }

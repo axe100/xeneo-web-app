@@ -8,11 +8,13 @@ body {
     font-size: 12px;
 }
 /*Template*/
-#profile_bar{
+#profile_div{
     height:40px;
     width:100%;
     background-color: whitesmoke; 
 }
+
+
 
 #master{
     width:960px;
@@ -136,11 +138,6 @@ footer{
     text-align: right;
 }
 
-.messages{
-    font-family:Arial;
-    font-size: 10px;
-    color: red; 
-}
 
 #Userform{
     margin-top:10px;
@@ -156,14 +153,7 @@ footer{
     color: grey;
 }
 
-#ProfileDiv{
-    margin-left:0px;
-    margin-top:0px;
-    float:left;
-    width:700px;
-    background-color: white;
 
-}
 #CaseTypeDiv{
     margin-left:0px;
     margin-top:0px;
@@ -206,7 +196,6 @@ footer{
 }
 
 
-
 /*Case Management*/
 
 #CaseForm{
@@ -243,14 +232,14 @@ ctDropdown{
 .fieldset{
     margin-top:15px;
     margin-bottom:0px;
-    margin-left:17px;
+    margin-left:15px;
     margin-right:15px;
 }
 
 .fieldset1{
 
     margin-top:15px;
-    margin-left:17px;
+    margin-left:15px;
     margin-right:15px;
 }
 
@@ -283,5 +272,17 @@ ctDropdown{
 
 .ui-panel .ui-panel-content {
     padding:0 !important;
+}
+
+.ui-menuitem-text .profile_bar{
+    margin-right:23px !important;
+}
+
+.ui-icon-person {
+    margin-left:35px !important;
+}
+
+.ui-messages-info, .ui-messages-warn, .ui-messages-error, .ui-messages-fatal{
+    margin:15px !important;
 }
 

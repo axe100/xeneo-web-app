@@ -19,11 +19,14 @@
                 <h:form class="form">  
                     <p:panel header="Add Cases">  
                         <h:panelGrid columns="2" styleClass="panelclass">  
+                            
+                            <p:messages showDetail="true" autoUpdate="true" id="messages"/>
+                            
                             <h:outputText value="Case titel: " class="labels" />  
                             <p:inputText value="#{casemanagement.casename}" style="margin-left:15px;"/>
 
                             <h:outputText value="Case description: " class="labels"/>
-                            <p:editor value="#{casemanagement.casedescription}" width="477" height="250" style="margin-left:15px;" controls="bold italic underline strikethrough"/>
+                            <p:editor value="#{casemanagement.casedescription}" width="493" height="250" style="margin-left:15px;" controls="bold italic underline strikethrough"/>
 
                             <h:outputText value="Case type: " class="labels"/>  
                             <p:selectOneMenu value="#{casemanagement.casetype}" style="margin-left:15px;">   
@@ -57,11 +60,11 @@
 
                         <p:column selectionMode="multiple" style="width:18px" />
 
-                        <p:column headerText="Firstname" filterBy="#{user.firstName}" filterMatchMode="contains">  
+                        <p:column id="FirstnameCollumn" headerText="Firstname" filterBy="#{user.firstName}" filterMatchMode="startsWith">  
                             <h:outputText value="#{user.firstName}" />  
                         </p:column>  
 
-                        <p:column headerText="Lastname" filterBy="#{user.lastName}" filterMatchMode="contains">  
+                        <p:column id="LastnameCollumn" headerText="Lastname" filterBy="#{adduser.lastName}" filterMatchMode="contains">  
                             <h:outputText value="#{user.lastName}" />  
                         </p:column> 
 

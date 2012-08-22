@@ -16,14 +16,14 @@
 
     <h:body>
 
-        <div id="profile_bar">
+        <div id="profile_div">
 
             <h:form id="profile_form">
                 
                 <p:growl id="messages" autoUpdate="true"/>
                 
                 <p:menubar>  
-                    <p:submenu label="Account" icon="ui-icon-person">    
+                    <p:submenu label="Account" icon="ui-icon-person" styleClass="profile_bar">    
                         <p:menuitem value="Change User Data" action="profile-management.xhtml" icon="ui-icon-gear"/>   
                         <p:menuitem value="Change Password" action="profile-management.xhtml" icon="ui-icon-gear"/> 
                         <p:separator />

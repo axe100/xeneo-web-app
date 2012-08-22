@@ -21,18 +21,20 @@
                 <h:form>
                     <p:panel header="Add Task">
 
+                        <p:messages showDetail="true" autoUpdate="true" id="messages"/>
+
                         <h:panelGrid columns="2" styleClass="panelclass" cellpadding="5">
 
                             <h:outputLabel class="labels" value="Task name: " />
                             <p:inputText value="#{task.name}" style="margin-left: 15px;"/>
 
                             <h:outputLabel class="labels" value="Task description: "/>
-                            <p:editor value="#{task.description}" width="466" height="250" style="margin-left:15px;" controls="bold italic underline strikethrough"/>
+                            <p:editor value="#{task.description}" width="495" height="250" style="margin-left:15px;" controls="bold italic underline strikethrough"/>
 
                         </h:panelGrid>
 
 
-                        <p:commandButton type="submit" action="#{task.saveTask()}" styleClass="buttons1" value="Save Task" />
+                        <p:commandButton type="submit" action="#{taskcreatebean.createTask()}" styleClass="buttons1" value="Save Task" />
                         <p:commandButton type="reset" value="Reset All" styleClass="buttons"/>
 
 

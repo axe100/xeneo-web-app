@@ -19,7 +19,7 @@ import org.primefaces.model.SelectableDataModel;
 @RequestScoped
 public class UserDataModel extends ListDataModel<UserManagementBean> implements SelectableDataModel<UserManagementBean> {
 
-   
+    
     public UserDataModel() {
     }
     

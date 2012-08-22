@@ -15,6 +15,8 @@
  */
 package org.xeneo.web.beans;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -22,13 +24,10 @@ import org.springframework.stereotype.Component;
  *
  * @author Stefan Huber
  */
-
 @Component("casetype")
 @Scope("request")
+public class CaseTypeBean {
 
-public class CaseTypeBean{
-
-    
     private String caseTypeName;
     private String caseTypeDescription;
 
@@ -50,32 +49,17 @@ public class CaseTypeBean{
     public void setCaseTypeName(String caseTypeName) {
         this.caseTypeName = caseTypeName;
     }
-    
-    public String savecasetype(){
+
+    public String savecasetype() {
         
+        FacesContext context = FacesContext.getCurrentInstance();
+        
+        if(caseTypeName.equals("")||caseTypeDescription.equals("")){
+        
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "All Fields are required!", ""));
+            
+        }
+
         return null;
-    }
-    
-        public String toProfileManaged(){
-   
-    
-        
-    return "profile-management";
-    }
-    
-    public String toCaseTypeManagement(){
-   
-    
-        
-    return "casetype-management";
-    }
-    
-    public String toCaseManagement(){
-    
-        return "case-management";
-    }
-public String toadduser(){
-    
-        return "add-user";
     }
 }
